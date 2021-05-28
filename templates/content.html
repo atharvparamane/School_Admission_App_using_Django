@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} history {% endblock title %}
+
+{% block body %}
+<font color="white">
+<h1>history</h1>
+<ul>
+{% for event in contact_list %}
+    <strong> {{event}}</strong>
+    <ul>
+        <li>{{event.email}}</li>
+        <li>{{event.phone}}</li>
+        <li>{{event.desc}}</li>
+        <li>{{event.date}}</li>
+    </ul>
+{% endfor%}
+
+</ul>
+</font>
+
+
+{% endblock body %}
